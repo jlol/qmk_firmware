@@ -19,22 +19,19 @@
 //common encoder setup
 
 bool encoder_update_kb(uint8_t index, bool clockwise) {
-    if (!encoder_update_user(index, clockwise)) { return false; }
-    if (index == 0) { /* First encoder */
+    //if (!encoder_update_user(index, clockwise)) { return false; }
+
+    if (index == 0) { // First encoder 
         if (clockwise) {
             tap_code(KC__VOLUP);
         } else {
             tap_code(KC__VOLDOWN);
         }
-    } else if (index == 1) { /* Second encoder */
-        if (clockwise) {
-            tap_code(KC_PGUP);
-        } else {
-            tap_code(KC_PGDN);
-        }
     }
+
     return true;
 }
+
 //common oled support.
 #ifdef OLED_ENABLE
 bool oled_task_kb(void) {
@@ -45,12 +42,24 @@ bool oled_task_kb(void) {
         oled_write_P(PSTR("Layer: "), false);
         switch (get_highest_layer(layer_state)) {
             case 0:
-                oled_write_ln_P(PSTR("Default"), false);
+                oled_write_ln_P(PSTR("Base"), false);
+                break;
+            case 1:
+                oled_write_ln_P(PSTR("Move"), false);
+                break;
+            case 2:
+                oled_write_ln_P(PSTR("Numbers"), false);
+                break;
+            case 3:
+                oled_write_ln_P(PSTR("NumPad"), false);
+            case 4:
+                oled_write_ln_P(PSTR("Symbols"), false);
                 break;
             default:
                 // Or use the write_ln shortcut over adding '\n' to the end of your string
                 oled_write_ln_P(PSTR("Undefined"), false);
          }
+
         // Host Keyboard LED Status
         led_t led_state = host_keyboard_led_state();
         oled_write_P(led_state.num_lock ? PSTR("NUM ") : PSTR("    "), false);

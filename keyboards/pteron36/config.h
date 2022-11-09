@@ -140,16 +140,33 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define BOOTMAGIC_LITE_ROW 0
 //#define BOOTMAGIC_LITE_COLUMN 0
 // for via
-#define DYNAMIC_KEYMAP_LAYER_COUNT 7
+#define DYNAMIC_KEYMAP_LAYER_COUNT 6
 
 //left encoder
 #define ENCODERS_PAD_A { F5 }
 #define ENCODERS_PAD_B { F4 }
 
 //right encoder
-#define ENCODERS_PAD_A_RIGHT { F4 }
-#define ENCODERS_PAD_B_RIGHT { F5 }
+#define ENCODERS_PAD_A_RIGHT { }
+#define ENCODERS_PAD_B_RIGHT { }
 
 //RGB Underglow
-#define RGB_DI_PIN B6
-#define RGBLED_NUM 10
+//#define RGB_DI_PIN B6
+//#define RGBLED_NUM 10
+
+#define COMBO_COUNT 2
+
+
+
+// Configure the global tapping term (default: 200ms)
+#define TAPPING_TERM 200
+
+// Prevent normal rollover on alphas from accidentally triggering mods.
+#define IGNORE_MOD_TAP_INTERRUPT
+
+#define HOLD_ON_OTHER_KEY_PRESS
+
+// Enable rapid switch from tap to hold, disables double tap hold auto-repeat.
+#define TAPPING_FORCE_HOLD_PER_KEY 
+
+//#define PERMISSIVE_HOLD
