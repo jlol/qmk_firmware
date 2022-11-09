@@ -23,9 +23,9 @@ bool encoder_update_kb(uint8_t index, bool clockwise) {
 
     if (index == 0) { // First encoder 
         if (clockwise) {
-            tap_code(KC__VOLUP);
+            tap_code(KC_AUDIO_VOL_UP);
         } else {
-            tap_code(KC__VOLDOWN);
+            tap_code(KC_AUDIO_VOL_DOWN);
         }
     }
 
