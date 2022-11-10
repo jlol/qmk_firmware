@@ -55,6 +55,9 @@ bool oled_task_kb(void) {
             case 4:
                 oled_write_ln_P(PSTR("Symbols"), false);
                 break;
+            case 5:
+                oled_write_ln_P(PSTR("Only numbers"), false);
+                break;
             default:
                 // Or use the write_ln shortcut over adding '\n' to the end of your string
                 oled_write_ln_P(PSTR("Undefined"), false);

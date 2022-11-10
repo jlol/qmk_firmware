@@ -168,8 +168,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // Enable rapid switch from tap to hold, disables double tap hold auto-repeat.
 #define TAPPING_FORCE_HOLD_PER_KEY 
 
-#define PERMISSIVE_HOLD
-//#define HOLD_ON_OTHER_KEY_PRESS
+//#define PERMISSIVE_HOLD
+#define HOLD_ON_OTHER_KEY_PRESS
 
 
 #define COMBO_TERM 25        // how quickly all combo keys must be pressed in succession to trigger
