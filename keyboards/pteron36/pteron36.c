@@ -55,8 +55,8 @@ bool oled_task_kb(void) {
             case 4:
                 oled_write_ln_P(PSTR("Symbols"), false);
                 break;
-            case 5:
-                oled_write_ln_P(PSTR("Only numbers"), false);
+            //case 5:
+            //    oled_write_ln_P(PSTR("Only numbers"), false);
                 break;
             default:
                 // Or use the write_ln shortcut over adding '\n' to the end of your string
@@ -64,10 +64,12 @@ bool oled_task_kb(void) {
          }
 
         // Host Keyboard LED Status
-        led_t led_state = host_keyboard_led_state();
-        oled_write_P(led_state.num_lock ? PSTR("NUM ") : PSTR("    "), false);
-        oled_write_P(led_state.caps_lock ? PSTR("CAP ") : PSTR("    "), false);
-        oled_write_P(led_state.scroll_lock ? PSTR("SCR ") : PSTR("    "), false);
+        //led_t led_state = host_keyboard_led_state();
+        //oled_write_P(led_state.num_lock ? PSTR("NUM ") : PSTR("    "), false);
+        //oled_write_P(led_state.caps_lock ? PSTR("CAP ") : PSTR("    "), false);
+        //oled_write_P(led_state.scroll_lock ? PSTR("SCR ") : PSTR("    "), false);
+        oled_write_ln_P(PSTR(""), false);
+        oled_write_ln_P(PSTR(""), false);
     } else {
         static const char PROGMEM qmk_logo[] = {
             0x80, 0x81, 0x82, 0x83, 0x84, 0x85, 0x86, 0x87, 0x88, 0x89, 0x8A, 0x8B, 0x8C, 0x8D, 0x8E, 0x8F, 0x90, 0x91, 0x92, 0x93, 0x94,

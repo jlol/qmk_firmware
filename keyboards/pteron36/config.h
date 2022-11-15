@@ -154,7 +154,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define RGB_DI_PIN B6
 //#define RGBLED_NUM 10
 
-#define COMBO_COUNT 7
+#define COMBO_COUNT 5
 
 
 
@@ -170,6 +170,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 //#define PERMISSIVE_HOLD
 #define HOLD_ON_OTHER_KEY_PRESS
+#define HOLD_ON_OTHER_KEY_PRESS_PER_KEY
 
 
 #define COMBO_TERM 25        // how quickly all combo keys must be pressed in succession to trigger
