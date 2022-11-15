@@ -73,16 +73,16 @@ enum custom_keycodes {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_BASE] = LAYOUT_split_3x5_3_encoder(
-	KC_Q, KC_W, KC_E, KC_R, KC_T, 						KC_Y, KC_U, KC_I, KC_O, KC_P, 
+	KC_Q, LGUI_T(KC_W), KC_E, KC_R, KC_T, 						KC_Y, KC_U, KC_I, KC_O, KC_P, 
 	LCTL_T(KC_A), LALT_T(KC_S), KC_D, KC_F, KC_G, 				KC_H, KC_J, KC_K, LALT_T(KC_L), TD(TD_SCLN_QUOT), 
 	LSFT_T(KC_Z), KC_X, KC_C, KC_V, KC_B, KC_AUDIO_MUTE, 			KC_N, KC_M, KC_COMM, KC_DOT, RSFT_T(KC_SLSH), 
-	KC_LALT, LT(_MOVE, KC_BSPC), LT(_SYMB, KC_ENT), TO(_MOVE),		TO(_NUMB), LT(_SYMB,KC_LGUI), KC_SPC, LT(_NUMB,KC_DEL)
+	KC_LEAD, LT(_MOVE, KC_BSPC), LT(_SYMB, KC_ENT), TO(_MOVE),		TO(_NUMB), MO(_SYMB), KC_SPC, LT(_NUMB,KC_DEL)
 ),
 
 [_MOVE] = LAYOUT_split_3x5_3_encoder(
 	KC_ESC, LGUI(KC_TAB), SGUI(KC_S), LALT(KC_F4), LSFT(KC_INS), 		KC_HOME, KC_PGDN, KC_PGUP, KC_END, KC_BSPC,
 	KC_TAB, KC_CUT, KC_COPY, KC_PSTE, KC_FIND,	 			KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, KC_ENT,
-	KC_LSFT, KC_PSCR, KC_NO, KC_NO, KC_NO, KC_AUDIO_MUTE,	 		LSA(KC_N), KC_NO, KC_CAPS, KC_NUM, KC_INS,
+	KC_LSFT, KC_PSCR, KC_NO, KC_NO, TO(_NUMPAD), KC_AUDIO_MUTE,	 	LSA(KC_N), KC_NO, KC_CAPS, KC_NUM, KC_INS,
 	KC_TRNS, KC_TRNS, KC_TRNS, TO(0), 					TO(0), KC_LCTL, KC_TRNS, KC_NO 
 ),
 
@@ -124,7 +124,7 @@ enum combos {
   HJ_TAB,
   QW_TAB,
   MCOMMA_NUM,
-  UI_ALT
+  //UI_ALT
 //  PO_CTRL,
 };
 
@@ -136,7 +136,7 @@ const uint16_t PROGMEM jk_combo[] = {KC_J, KC_K, COMBO_END};
 const uint16_t PROGMEM hj_combo[] = {KC_J, KC_H, COMBO_END};
 const uint16_t PROGMEM qw_combo[] = {KC_Q, KC_W, COMBO_END};
 const uint16_t PROGMEM mcomma_combo[] = {KC_M, KC_COMMA, COMBO_END};
-const uint16_t PROGMEM ui_combo[] = {KC_U, KC_I, COMBO_END};
+//const uint16_t PROGMEM ui_combo[] = {KC_U, KC_I, COMBO_END};
 //const uint16_t PROGMEM po_combo[] = {KC_P, KC_O, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
@@ -148,7 +148,7 @@ combo_t key_combos[COMBO_COUNT] = {
   [HJ_TAB] = COMBO(hj_combo, KC_TAB),
   [QW_TAB] = COMBO(qw_combo, KC_TAB),
   [MCOMMA_NUM] = COMBO(mcomma_combo, OSL(2)),
-  [UI_ALT] = COMBO(ui_combo, TO(_NUMPAD)),
+  //[UI_ALT] = COMBO(ui_combo, TO(_NUMPAD)),
   //[PO_CTRL] = COMBO(po_combo, KC_LCTL),
 //  [SD_LAYER] = COMBO(sd_combo, MO(_LAYER)),
 };
@@ -303,3 +303,93 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 
     //[TD_SCLN_QUOT] = ACTION_TAP_DANCE_DOUBLE(KC_SCLN, KC_QUOT)
 };
+
+
+// LEADER
+LEADER_EXTERNS();
+
+void matrix_scan_user(void) {
+  LEADER_DICTIONARY() {
+    leading = false;
+    leader_end();
+
+    // Create file in current directory
+    SEQ_TWO_KEYS(KC_F, KC_N) {
+      register_code(KC_LSFT);
+      register_code(KC_LALT);
+      register_code(KC_N);
+      unregister_code(KC_N);
+      unregister_code(KC_LALT);
+      unregister_code(KC_LSFT);
+    }
+
+    // Search everywhere
+    SEQ_TWO_KEYS(KC_S, KC_E) {
+      register_code(KC_LCTL);
+      register_code(KC_T);
+      unregister_code(KC_T);
+      unregister_code(KC_LCTL);   
+    }
+
+    // Find in solution
+    SEQ_TWO_KEYS(KC_F, KC_E) {
+      register_code(KC_LCTL);
+      register_code(KC_LSFT);
+      register_code(KC_F);
+      unregister_code(KC_F);
+      unregister_code(KC_LSFT);
+      unregister_code(KC_LCTL);
+    }
+
+    // Refactor this
+    SEQ_TWO_KEYS(KC_C, KC_R) {
+      register_code(KC_LCTL);
+      register_code(KC_LSFT);
+      register_code(KC_R);
+      unregister_code(KC_R);
+      unregister_code(KC_LSFT);
+      unregister_code(KC_LCTL);    
+    }
+
+    // Extract method
+    SEQ_TWO_KEYS(KC_C, KC_E) {
+      register_code(KC_LCTL);
+      register_code(KC_R);
+      unregister_code(KC_R);
+      unregister_code(KC_LCTL);    
+      register_code(KC_M);
+      unregister_code(KC_M);
+    }
+
+    // Introduce variable
+    SEQ_THREE_KEYS(KC_C, KC_I, KC_V) {
+      register_code(KC_LCTL);
+      register_code(KC_R);
+      unregister_code(KC_R);
+      unregister_code(KC_LCTL);    
+      register_code(KC_V);
+      unregister_code(KC_V);
+    }
+
+    // Introduce variable
+    SEQ_THREE_KEYS(KC_C, KC_I, KC_F) {
+      register_code(KC_LCTL);
+      register_code(KC_R);
+      unregister_code(KC_R);
+      unregister_code(KC_LCTL);    
+      register_code(KC_F);
+      unregister_code(KC_F);
+    }
+
+    // Introduce variable
+    SEQ_THREE_KEYS(KC_C, KC_I, KC_P) {
+      register_code(KC_LCTL);
+      register_code(KC_R);
+      unregister_code(KC_R);
+      unregister_code(KC_LCTL);    
+      register_code(KC_P);
+      unregister_code(KC_P);
+    }
+  }
+}
+

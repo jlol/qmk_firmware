@@ -154,12 +154,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define RGB_DI_PIN B6
 //#define RGBLED_NUM 10
 
-#define COMBO_COUNT 5
+#define COMBO_COUNT 4
 
 
 
 // Configure the global tapping term (default: 200ms)
-#define TAPPING_TERM 200
+#define TAPPING_TERM 220
 
 // Prevent normal rollover on alphas from accidentally triggering mods.
 #define IGNORE_MOD_TAP_INTERRUPT
@@ -176,3 +176,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define COMBO_TERM 25        // how quickly all combo keys must be pressed in succession to trigger
 #define COMBO_MUST_HOLD_MODS // if a combo triggers a modifier, only trigger when the combo is held
 #define COMBO_HOLD_TERM 175  // how long at least one of the combo keys must be held to trigger
+
+#define LEADER_TIMEOUT 600
+#define LEADER_PER_KEY_TIMING

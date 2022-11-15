@@ -23,5 +23,6 @@ SPLIT_KEYBOARD = yes        # Split enable
 COMBO_ENABLE = yes
 TAP_DANCE_ENABLE = yes
 LTO_ENABLE = yes
+LEADER_ENABLE = yes
 
 LAYOUTS = split_3x5_3
