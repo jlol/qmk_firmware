@@ -3,7 +3,7 @@
 
 #pragma once
 
-#define DIRECT_PINS {{D1, D0, D4}, {C6, D7, E6}, {B4, B5, F6}, {F7, B1, B3}}
+#define DIRECT_PINS {{D1, D0, D4, C6, D7, E6, B4, B5, F6, F7, B1, B3}}
 
 #define MIDI_ADVANCED
 #define SLIDER_PINA F4
