@@ -112,18 +112,33 @@ bool oled_task_kb(void) {
                 oled_write_ln_P(PSTR("Symbols"), false);
                 break;
 <<<<<<< HEAD
+<<<<<<< HEAD
             //case 5:
             //    oled_write_ln_P(PSTR("Only numbers"), false);
 =======
             case 5:
                 oled_write_ln_P(PSTR("Only numbers"), false);
 >>>>>>> f6c77ec26f (new layer for numbers)
+=======
+            //case 5:
+            //    oled_write_ln_P(PSTR("Only numbers"), false);
+>>>>>>> 39687ddc2f (v2)
                 break;
             default:
                 // Or use the write_ln shortcut over adding '\n' to the end of your string
                 oled_write_ln_P(PSTR("Undefined"), false);
          }
 
+<<<<<<< HEAD
+=======
+        // Host Keyboard LED Status
+        //led_t led_state = host_keyboard_led_state();
+        //oled_write_P(led_state.num_lock ? PSTR("NUM ") : PSTR("    "), false);
+        //oled_write_P(led_state.caps_lock ? PSTR("CAP ") : PSTR("    "), false);
+        //oled_write_P(led_state.scroll_lock ? PSTR("SCR ") : PSTR("    "), false);
+        oled_write_ln_P(PSTR(""), false);
+        oled_write_ln_P(PSTR(""), false);
+>>>>>>> 39687ddc2f (v2)
     } else {
         static const char PROGMEM qmk_logo[] = {
 		// 'bender_oled', 128x32px

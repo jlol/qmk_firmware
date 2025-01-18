@@ -27,6 +27,9 @@
 #define _NUMPAD 3
 #define _SYMB 4
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 39687ddc2f (v2)
 //#define _FNUM 5
 
 
@@ -60,9 +63,12 @@ td_state_t cur_dance(qk_tap_dance_state_t *state);
 void x_finished(qk_tap_dance_state_t *state, void *user_data);
 void x_reset(qk_tap_dance_state_t *state, void *user_data);
 ////////////////////////////////////////////////////////////////////////////////////
+<<<<<<< HEAD
 =======
 #define _FNUM 5
 >>>>>>> f6c77ec26f (new layer for numbers)
+=======
+>>>>>>> 39687ddc2f (v2)
 
 enum custom_keycodes {
     BASE = SAFE_RANGE,
@@ -71,16 +77,21 @@ enum custom_keycodes {
     NUMPAD,
     SYMB,
 <<<<<<< HEAD
+<<<<<<< HEAD
 //    FNUM
 =======
     FNUM
 >>>>>>> f6c77ec26f (new layer for numbers)
+=======
+//    FNUM
+>>>>>>> 39687ddc2f (v2)
 };
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_BASE] = LAYOUT_split_3x5_3_encoder(
+<<<<<<< HEAD
 <<<<<<< HEAD
 	KC_Q, LGUI_T(KC_W), KC_E, KC_R, KC_T, 						KC_Y, KC_U, KC_I, KC_O, KC_P, 
 	LCTL_T(KC_A), LALT_T(KC_S), KC_D, KC_F, KC_G, 				KC_H, KC_J, KC_K, LALT_T(KC_L), TD(TD_SCLN_QUOT), 
@@ -100,11 +111,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 =======
 	KC_LALT, LT(1, KC_BSPC), LT(4, KC_ENT), TO(1),		TO(5), LT(4,KC_LGUI), KC_SPC, LT(2,KC_DEL)
 >>>>>>> f6c77ec26f (new layer for numbers)
+=======
+	KC_Q, KC_W, KC_E, KC_R, KC_T, 						KC_Y, KC_U, KC_I, KC_O, KC_P, 
+	LCTL_T(KC_A), LALT_T(KC_S), KC_D, KC_F, KC_G, 				KC_H, KC_J, KC_K, LALT_T(KC_L), TD(TD_SCLN_QUOT), 
+	LSFT_T(KC_Z), KC_X, KC_C, KC_V, KC_B, KC_AUDIO_MUTE, 			KC_N, KC_M, KC_COMM, KC_DOT, RSFT_T(KC_SLSH), 
+	KC_LALT, LT(_MOVE, KC_BSPC), LT(_SYMB, KC_ENT), TO(_MOVE),		TO(_NUMB), LT(_SYMB,KC_LGUI), KC_SPC, LT(_NUMB,KC_DEL)
+>>>>>>> 39687ddc2f (v2)
 ),
 
 [_MOVE] = LAYOUT_split_3x5_3_encoder(
 	KC_ESC, LGUI(KC_TAB), SGUI(KC_S), LALT(KC_F4), LSFT(KC_INS), 		KC_HOME, KC_PGDN, KC_PGUP, KC_END, KC_BSPC,
 	KC_TAB, KC_CUT, KC_COPY, KC_PSTE, KC_FIND,	 			KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, KC_ENT,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 	KC_LSFT, KC_PSCR, KC_NO, KC_NO, TO(_NUMPAD), KC_AUDIO_MUTE,	 	LSA(KC_N), KC_NO, KC_CAPS, KC_NUM, KC_INS,
@@ -114,10 +132,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 =======
 	KC_LSFT, KC_PSCR, KC_NO, KC_NO, TO(3), KC_AUDIO_MUTE,	 		LSA(KC_N), KC_NO, KC_CAPS, KC_NUM, KC_INS,
 >>>>>>> 3f4ab4c451 (added shift to move tab)
+=======
+	KC_LSFT, KC_PSCR, KC_NO, KC_NO, KC_NO, KC_AUDIO_MUTE,	 		LSA(KC_N), KC_NO, KC_CAPS, KC_NUM, KC_INS,
+>>>>>>> 39687ddc2f (v2)
 	KC_TRNS, KC_TRNS, KC_TRNS, TO(0), 					TO(0), KC_LCTL, KC_TRNS, KC_NO 
 ),
 
 [_NUMB] = LAYOUT_split_3x5_3_encoder(
+<<<<<<< HEAD
 <<<<<<< HEAD
 	KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, 				KC_F6, KC_F7, KC_F8, KC_F9, KC_F10,
 	KC_1, KC_2, KC_3, KC_4, KC_5, 					KC_6, KC_7, KC_8, KC_9, KC_0,
@@ -132,17 +154,24 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	KC_NO, KC_BSPC, KC_ENT, TO(0), 					TO(0), KC_LGUI, KC_SPC, KC_0
 =======
 	KC_1, KC_2, KC_3, KC_4, KC_5, 					KC_6, KC_7, KC_8, KC_9, KC_0,
+=======
+>>>>>>> 39687ddc2f (v2)
 	KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, 				KC_F6, KC_F7, KC_F8, KC_F9, KC_F10,
-	KC_TRNS, KC_TRNS, KC_TRNS, KC_F11, KC_F12, KC_AUDIO_MUTE, 	KC_INS, KC_TRNS, KC_NO, KC_TRNS, KC_TRNS,
+	KC_1, KC_2, KC_3, KC_4, KC_5, 					KC_6, KC_7, KC_8, KC_9, KC_0,
+	KC_F11, KC_F12, KC_TRNS, KC_TRNS, KC_TRNS, KC_AUDIO_MUTE, 	KC_INS, KC_NO, KC_COMM, KC_DOT, KC_TRNS,
 	KC_TRNS, KC_TRNS, KC_TRNS, TO(0),				TO(0), KC_TRNS, KC_RCTL, KC_RALT
 ),
 
 [_NUMPAD] = LAYOUT_split_3x5_3_encoder(
-	TO(0), KC_NO, KC_NO, KC_NO, KC_NO, 				KC_PMNS, KC_7, KC_8, KC_9, KC_PPLS,
+	KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, 				KC_PMNS, KC_7, KC_8, KC_9, KC_PPLS,
 	KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, 				KC_PAST, KC_4, KC_5, KC_6, KC_PDOT,
 	KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,  KC_AUDIO_MUTE,		KC_PSLS, KC_1, KC_2, KC_3, KC_PEQL,
+<<<<<<< HEAD
 	KC_NO, KC_BSPC, KC_ENT, KC_NO, 					KC_NO, KC_NO, KC_NO, KC_0
 >>>>>>> 0adca45d00 (layer changes)
+=======
+	KC_NO, KC_BSPC, KC_ENT, TO(0), 					TO(0), KC_LGUI, KC_SPC, KC_0
+>>>>>>> 39687ddc2f (v2)
 ),
 
 [_SYMB] = LAYOUT_split_3x5_3_encoder(
@@ -152,16 +181,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	KC_TRNS, KC_NO, KC_TRNS, KC_NO, 				KC_NO, KC_NO, KC_NO, KC_NO
 ),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*
 =======
 
 >>>>>>> f6c77ec26f (new layer for numbers)
+=======
+/*
+>>>>>>> 39687ddc2f (v2)
 [_FNUM] = LAYOUT_split_3x5_3_encoder(
 	KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, 				KC_NO, KC_NO, KC_NO, KC_NO, KC_BSPC,
 	KC_1, KC_2, KC_3, KC_4, KC_5, 					KC_6, KC_7, KC_8, KC_9, KC_0,
 	KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_AUDIO_MUTE,		KC_NO, KC_NO, KC_COMM, KC_DOT, KC_NO,
 	KC_RCTL, KC_TRNS, KC_TRNS, TO(0),				TO(0), KC_TRNS, KC_SPC, KC_RALT
 )
+<<<<<<< HEAD
 <<<<<<< HEAD
 	*/
 =======
@@ -206,38 +240,50 @@ combo_t key_combos[COMBO_COUNT] = {
 =======
   AS_CTRL,
   LSCLN_CTRL,
+=======
+	*/
+};
+
+enum combos {
+  //AS_CTRL,
+  //LSCLN_CTRL,
+>>>>>>> 39687ddc2f (v2)
   JK_ESC,
-  KL_ALT,
+  //KL_ALT,
   HJ_TAB,
   QW_TAB,
   MCOMMA_NUM,
+  UI_ALT
 //  PO_CTRL,
-//  UI_ALT
 };
 
-const uint16_t PROGMEM as_combo[] = {KC_A, KC_S, COMBO_END};
+//const uint16_t PROGMEM as_combo[] = {KC_A, KC_S, COMBO_END};
 //const uint16_t PROGMEM lscln_combo[] = {KC_L, KC_SCLN, COMBO_END};
-const uint16_t PROGMEM lscln_combo[] = {KC_L, TD(TD_SCLN_QUOT), COMBO_END};
+//const uint16_t PROGMEM lscln_combo[] = {KC_L, TD(TD_SCLN_QUOT), COMBO_END};
 const uint16_t PROGMEM jk_combo[] = {KC_J, KC_K, COMBO_END};
-const uint16_t PROGMEM kl_combo[] = {KC_K, KC_L, COMBO_END};
+//const uint16_t PROGMEM kl_combo[] = {KC_K, KC_L, COMBO_END};
 const uint16_t PROGMEM hj_combo[] = {KC_J, KC_H, COMBO_END};
 const uint16_t PROGMEM qw_combo[] = {KC_Q, KC_W, COMBO_END};
 const uint16_t PROGMEM mcomma_combo[] = {KC_M, KC_COMMA, COMBO_END};
+const uint16_t PROGMEM ui_combo[] = {KC_U, KC_I, COMBO_END};
 //const uint16_t PROGMEM po_combo[] = {KC_P, KC_O, COMBO_END};
-//const uint16_t PROGMEM ui_combo[] = {KC_U, KC_I, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
 //  [AB_ESC] = COMBO(ab_combo, KC_ESC),
-  [AS_CTRL] = COMBO(as_combo, KC_LCTL),
-  [LSCLN_CTRL] = COMBO(lscln_combo, KC_LCTL),
+  //[AS_CTRL] = COMBO(as_combo, KC_LCTL),
+  //[LSCLN_CTRL] = COMBO(lscln_combo, KC_LCTL),
   [JK_ESC] = COMBO(jk_combo, KC_ESC),
-  [KL_ALT] = COMBO(kl_combo, KC_LALT),
+  //[KL_ALT] = COMBO(kl_combo, KC_LALT),
   [HJ_TAB] = COMBO(hj_combo, KC_TAB),
-  //[PO_CTRL] = COMBO(po_combo, KC_LCTL),
   [QW_TAB] = COMBO(qw_combo, KC_TAB),
   [MCOMMA_NUM] = COMBO(mcomma_combo, OSL(2)),
+<<<<<<< HEAD
   //[UI_ALT] = COMBO(ui_combo, KC_LALT),
 >>>>>>> 8f6d320382 (Combos)
+=======
+  [UI_ALT] = COMBO(ui_combo, TO(_NUMPAD)),
+  //[PO_CTRL] = COMBO(po_combo, KC_LCTL),
+>>>>>>> 39687ddc2f (v2)
 //  [SD_LAYER] = COMBO(sd_combo, MO(_LAYER)),
 };
 
@@ -391,6 +437,7 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 
     //[TD_SCLN_QUOT] = ACTION_TAP_DANCE_DOUBLE(KC_SCLN, KC_QUOT)
 };
+<<<<<<< HEAD
 
 
 // LEADER
@@ -481,3 +528,5 @@ void matrix_scan_user(void) {
   }
 }
 
+=======
+>>>>>>> 39687ddc2f (v2)

@@ -155,10 +155,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define RGBLED_NUM 10
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #define COMBO_COUNT 4
 =======
 #define COMBO_COUNT 7
 >>>>>>> 8f6d320382 (Combos)
+=======
+#define COMBO_COUNT 5
+>>>>>>> 39687ddc2f (v2)
 
 
 
@@ -186,6 +190,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define HOLD_ON_OTHER_KEY_PRESS
 =======
 #define HOLD_ON_OTHER_KEY_PRESS
+#define HOLD_ON_OTHER_KEY_PRESS_PER_KEY
 
 >>>>>>> 8f6d320382 (Combos)
 
