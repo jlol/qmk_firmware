@@ -149,6 +149,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 enum combos {
+<<<<<<< HEAD
   //AS_CTRL,
   //LSCLN_CTRL,
   JK_ESC,
@@ -182,6 +183,41 @@ combo_t key_combos[COMBO_COUNT] = {
   [MCOMMA_NUM] = COMBO(mcomma_combo, OSL(2)),
   //[UI_ALT] = COMBO(ui_combo, TO(_NUMPAD)),
   //[PO_CTRL] = COMBO(po_combo, KC_LCTL),
+=======
+  AS_CTRL,
+  LSCLN_CTRL,
+  JK_ESC,
+  KL_ALT,
+  HJ_TAB,
+  QW_TAB,
+  MCOMMA_NUM,
+//  PO_CTRL,
+//  UI_ALT
+};
+
+const uint16_t PROGMEM as_combo[] = {KC_A, KC_S, COMBO_END};
+//const uint16_t PROGMEM lscln_combo[] = {KC_L, KC_SCLN, COMBO_END};
+const uint16_t PROGMEM lscln_combo[] = {KC_L, TD(TD_SCLN_QUOT), COMBO_END};
+const uint16_t PROGMEM jk_combo[] = {KC_J, KC_K, COMBO_END};
+const uint16_t PROGMEM kl_combo[] = {KC_K, KC_L, COMBO_END};
+const uint16_t PROGMEM hj_combo[] = {KC_J, KC_H, COMBO_END};
+const uint16_t PROGMEM qw_combo[] = {KC_Q, KC_W, COMBO_END};
+const uint16_t PROGMEM mcomma_combo[] = {KC_M, KC_COMMA, COMBO_END};
+//const uint16_t PROGMEM po_combo[] = {KC_P, KC_O, COMBO_END};
+//const uint16_t PROGMEM ui_combo[] = {KC_U, KC_I, COMBO_END};
+
+combo_t key_combos[COMBO_COUNT] = {
+//  [AB_ESC] = COMBO(ab_combo, KC_ESC),
+  [AS_CTRL] = COMBO(as_combo, KC_LCTL),
+  [LSCLN_CTRL] = COMBO(lscln_combo, KC_LCTL),
+  [JK_ESC] = COMBO(jk_combo, KC_ESC),
+  [KL_ALT] = COMBO(kl_combo, KC_LALT),
+  [HJ_TAB] = COMBO(hj_combo, KC_TAB),
+  //[PO_CTRL] = COMBO(po_combo, KC_LCTL),
+  [QW_TAB] = COMBO(qw_combo, KC_TAB),
+  [MCOMMA_NUM] = COMBO(mcomma_combo, OSL(2)),
+  //[UI_ALT] = COMBO(ui_combo, KC_LALT),
+>>>>>>> 8f6d320382 (Combos)
 //  [SD_LAYER] = COMBO(sd_combo, MO(_LAYER)),
 };
 
