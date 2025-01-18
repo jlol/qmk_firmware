@@ -93,6 +93,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_BASE] = LAYOUT_split_3x5_3_encoder(
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	KC_Q, LGUI_T(KC_W), KC_E, KC_R, KC_T, 						KC_Y, KC_U, KC_I, KC_O, KC_P, 
 	LCTL_T(KC_A), LALT_T(KC_S), KC_D, KC_F, KC_G, 				KC_H, KC_J, KC_K, LALT_T(KC_L), TD(TD_SCLN_QUOT), 
 	LSFT_T(KC_Z), KC_X, KC_C, KC_V, KC_B, KC_AUDIO_MUTE, 			KC_N, KC_M, KC_COMM, KC_DOT, RSFT_T(KC_SLSH), 
@@ -117,11 +118,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	LSFT_T(KC_Z), KC_X, KC_C, KC_V, KC_B, KC_AUDIO_MUTE, 			KC_N, KC_M, KC_COMM, KC_DOT, RSFT_T(KC_SLSH), 
 	KC_LALT, LT(_MOVE, KC_BSPC), LT(_SYMB, KC_ENT), TO(_MOVE),		TO(_NUMB), LT(_SYMB,KC_LGUI), KC_SPC, LT(_NUMB,KC_DEL)
 >>>>>>> 39687ddc2f (v2)
+=======
+	KC_Q, LGUI_T(KC_W), KC_E, KC_R, KC_T, 						KC_Y, KC_U, KC_I, KC_O, KC_P, 
+	LCTL_T(KC_A), LALT_T(KC_S), KC_D, KC_F, KC_G, 				KC_H, KC_J, KC_K, LALT_T(KC_L), TD(TD_SCLN_QUOT), 
+	LSFT_T(KC_Z), KC_X, KC_C, KC_V, KC_B, KC_AUDIO_MUTE, 			KC_N, KC_M, KC_COMM, KC_DOT, RSFT_T(KC_SLSH), 
+	KC_LEAD, LT(_MOVE, KC_BSPC), LT(_SYMB, KC_ENT), TO(_MOVE),		TO(_NUMB), MO(_SYMB), KC_SPC, LT(_NUMB,KC_DEL)
+>>>>>>> 6c2cd42cf8 (Added leader key, removed app key from right thumb, added futurama images in oled :))
 ),
 
 [_MOVE] = LAYOUT_split_3x5_3_encoder(
 	KC_ESC, LGUI(KC_TAB), SGUI(KC_S), LALT(KC_F4), LSFT(KC_INS), 		KC_HOME, KC_PGDN, KC_PGUP, KC_END, KC_BSPC,
 	KC_TAB, KC_CUT, KC_COPY, KC_PSTE, KC_FIND,	 			KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, KC_ENT,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -135,6 +143,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 =======
 	KC_LSFT, KC_PSCR, KC_NO, KC_NO, KC_NO, KC_AUDIO_MUTE,	 		LSA(KC_N), KC_NO, KC_CAPS, KC_NUM, KC_INS,
 >>>>>>> 39687ddc2f (v2)
+=======
+	KC_LSFT, KC_PSCR, KC_NO, KC_NO, TO(_NUMPAD), KC_AUDIO_MUTE,	 	LSA(KC_N), KC_NO, KC_CAPS, KC_NUM, KC_INS,
+>>>>>>> 6c2cd42cf8 (Added leader key, removed app key from right thumb, added futurama images in oled :))
 	KC_TRNS, KC_TRNS, KC_TRNS, TO(0), 					TO(0), KC_LCTL, KC_TRNS, KC_NO 
 ),
 
@@ -253,7 +264,7 @@ enum combos {
   HJ_TAB,
   QW_TAB,
   MCOMMA_NUM,
-  UI_ALT
+  //UI_ALT
 //  PO_CTRL,
 };
 
@@ -265,7 +276,7 @@ const uint16_t PROGMEM jk_combo[] = {KC_J, KC_K, COMBO_END};
 const uint16_t PROGMEM hj_combo[] = {KC_J, KC_H, COMBO_END};
 const uint16_t PROGMEM qw_combo[] = {KC_Q, KC_W, COMBO_END};
 const uint16_t PROGMEM mcomma_combo[] = {KC_M, KC_COMMA, COMBO_END};
-const uint16_t PROGMEM ui_combo[] = {KC_U, KC_I, COMBO_END};
+//const uint16_t PROGMEM ui_combo[] = {KC_U, KC_I, COMBO_END};
 //const uint16_t PROGMEM po_combo[] = {KC_P, KC_O, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
@@ -278,10 +289,14 @@ combo_t key_combos[COMBO_COUNT] = {
   [QW_TAB] = COMBO(qw_combo, KC_TAB),
   [MCOMMA_NUM] = COMBO(mcomma_combo, OSL(2)),
 <<<<<<< HEAD
+<<<<<<< HEAD
   //[UI_ALT] = COMBO(ui_combo, KC_LALT),
 >>>>>>> 8f6d320382 (Combos)
 =======
   [UI_ALT] = COMBO(ui_combo, TO(_NUMPAD)),
+=======
+  //[UI_ALT] = COMBO(ui_combo, TO(_NUMPAD)),
+>>>>>>> 6c2cd42cf8 (Added leader key, removed app key from right thumb, added futurama images in oled :))
   //[PO_CTRL] = COMBO(po_combo, KC_LCTL),
 >>>>>>> 39687ddc2f (v2)
 //  [SD_LAYER] = COMBO(sd_combo, MO(_LAYER)),
@@ -438,6 +453,9 @@ qk_tap_dance_action_t tap_dance_actions[] = {
     //[TD_SCLN_QUOT] = ACTION_TAP_DANCE_DOUBLE(KC_SCLN, KC_QUOT)
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6c2cd42cf8 (Added leader key, removed app key from right thumb, added futurama images in oled :))
 
 
 // LEADER
@@ -528,5 +546,8 @@ void matrix_scan_user(void) {
   }
 }
 
+<<<<<<< HEAD
 =======
 >>>>>>> 39687ddc2f (v2)
+=======
+>>>>>>> 6c2cd42cf8 (Added leader key, removed app key from right thumb, added futurama images in oled :))

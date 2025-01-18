@@ -156,6 +156,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #define COMBO_COUNT 4
 =======
 #define COMBO_COUNT 7
@@ -163,6 +164,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 =======
 #define COMBO_COUNT 5
 >>>>>>> 39687ddc2f (v2)
+=======
+#define COMBO_COUNT 4
+>>>>>>> 6c2cd42cf8 (Added leader key, removed app key from right thumb, added futurama images in oled :))
 
 
 
@@ -198,8 +202,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define COMBO_MUST_HOLD_MODS // if a combo triggers a modifier, only trigger when the combo is held
 #define COMBO_HOLD_TERM 175  // how long at least one of the combo keys must be held to trigger
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 #define LEADER_TIMEOUT 600
 #define LEADER_PER_KEY_TIMING
 =======
 >>>>>>> 8f6d320382 (Combos)
+=======
+
+#define LEADER_TIMEOUT 600
+#define LEADER_PER_KEY_TIMING
+>>>>>>> 6c2cd42cf8 (Added leader key, removed app key from right thumb, added futurama images in oled :))

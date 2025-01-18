@@ -130,6 +130,7 @@ bool oled_task_kb(void) {
          }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         // Host Keyboard LED Status
         //led_t led_state = host_keyboard_led_state();
@@ -139,6 +140,8 @@ bool oled_task_kb(void) {
         oled_write_ln_P(PSTR(""), false);
         oled_write_ln_P(PSTR(""), false);
 >>>>>>> 39687ddc2f (v2)
+=======
+>>>>>>> 6c2cd42cf8 (Added leader key, removed app key from right thumb, added futurama images in oled :))
     } else {
         static const char PROGMEM qmk_logo[] = {
 		// 'bender_oled', 128x32px
