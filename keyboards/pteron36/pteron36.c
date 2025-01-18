@@ -23,9 +23,21 @@ bool encoder_update_kb(uint8_t index, bool clockwise) {
 
     if (index == 0) { // First encoder 
         if (clockwise) {
+<<<<<<< HEAD
             tap_code(KC_AUDIO_VOL_UP);
         } else {
             tap_code(KC_AUDIO_VOL_DOWN);
+=======
+<<<<<<< HEAD
+            tap_code(KC_VOLU);
+        } else {
+            tap_code(KC_VOLD);
+=======
+            tap_code(KC_AUDIO_VOL_UP);
+        } else {
+            tap_code(KC_AUDIO_VOL_DOWN);
+>>>>>>> 4fc55134ec (layer changes)
+>>>>>>> 0adca45d00 (layer changes)
         }
     }
 

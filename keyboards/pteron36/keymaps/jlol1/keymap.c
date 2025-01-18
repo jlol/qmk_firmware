@@ -73,20 +73,32 @@ enum custom_keycodes {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_BASE] = LAYOUT_split_3x5_3_encoder(
+<<<<<<< HEAD
 	KC_Q, LGUI_T(KC_W), KC_E, KC_R, KC_T, 						KC_Y, KC_U, KC_I, KC_O, KC_P, 
 	LCTL_T(KC_A), LALT_T(KC_S), KC_D, KC_F, KC_G, 				KC_H, KC_J, KC_K, LALT_T(KC_L), TD(TD_SCLN_QUOT), 
 	LSFT_T(KC_Z), KC_X, KC_C, KC_V, KC_B, KC_AUDIO_MUTE, 			KC_N, KC_M, KC_COMM, KC_DOT, RSFT_T(KC_SLSH), 
 	KC_LEAD, LT(_MOVE, KC_BSPC), LT(_SYMB, KC_ENT), TO(_MOVE),		TO(_NUMB), MO(_SYMB), KC_SPC, LT(_NUMB,KC_DEL)
+=======
+	KC_Q, KC_W, KC_E, KC_R, KC_T, 				KC_Y, KC_U, KC_I, KC_O, KC_P, 
+	KC_A, KC_S, KC_D, KC_F, KC_G, 				KC_H, KC_J, KC_K, KC_L, TD(TD_SCLN_QUOT), 
+	LSFT_T(KC_Z), KC_X, KC_C, KC_V, KC_B, KC_AUDIO_MUTE, 	KC_N, KC_M, KC_COMM, KC_DOT, RSFT_T(KC_SLSH), 
+	KC_LALT, MO(1), MO(4), TO(1), 				TO(2), LT(4,KC_LGUI), KC_SPC, LT(2,KC_DEL)
+>>>>>>> 0adca45d00 (layer changes)
 ),
 
 [_MOVE] = LAYOUT_split_3x5_3_encoder(
 	KC_ESC, LGUI(KC_TAB), SGUI(KC_S), LALT(KC_F4), LSFT(KC_INS), 		KC_HOME, KC_PGDN, KC_PGUP, KC_END, KC_BSPC,
 	KC_TAB, KC_CUT, KC_COPY, KC_PSTE, KC_FIND,	 			KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, KC_ENT,
+<<<<<<< HEAD
 	KC_LSFT, KC_PSCR, KC_NO, KC_NO, TO(_NUMPAD), KC_AUDIO_MUTE,	 	LSA(KC_N), KC_NO, KC_CAPS, KC_NUM, KC_INS,
+=======
+	KC_PSCR, KC_NO, KC_NO, KC_NO, TO(3), KC_AUDIO_MUTE,	 		LSA(KC_N), KC_NO, KC_CAPS, KC_NUM, KC_INS,
+>>>>>>> 0adca45d00 (layer changes)
 	KC_TRNS, KC_TRNS, KC_TRNS, TO(0), 					TO(0), KC_LCTL, KC_TRNS, KC_NO 
 ),
 
 [_NUMB] = LAYOUT_split_3x5_3_encoder(
+<<<<<<< HEAD
 	KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, 				KC_F6, KC_F7, KC_F8, KC_F9, KC_F10,
 	KC_1, KC_2, KC_3, KC_4, KC_5, 					KC_6, KC_7, KC_8, KC_9, KC_0,
 	KC_F11, KC_F12, KC_TRNS, KC_TRNS, KC_TRNS, KC_AUDIO_MUTE, 	KC_INS, KC_NO, KC_COMM, KC_DOT, KC_TRNS,
@@ -98,6 +110,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, 				KC_PAST, KC_4, KC_5, KC_6, KC_PDOT,
 	KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,  KC_AUDIO_MUTE,		KC_PSLS, KC_1, KC_2, KC_3, KC_PEQL,
 	KC_NO, KC_BSPC, KC_ENT, TO(0), 					TO(0), KC_LGUI, KC_SPC, KC_0
+=======
+	KC_1, KC_2, KC_3, KC_4, KC_5, 					KC_6, KC_7, KC_8, KC_9, KC_0,
+	KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, 				KC_F6, KC_F7, KC_F8, KC_F9, KC_F10,
+	KC_TRNS, KC_TRNS, KC_TRNS, KC_F11, KC_F12, KC_AUDIO_MUTE, 	KC_INS, KC_TRNS, KC_NO, KC_TRNS, KC_TRNS,
+	KC_TRNS, KC_TRNS, KC_TRNS, TO(0),				TO(0), KC_TRNS, KC_RCTL, KC_RALT),
+
+[_NUMPAD] = LAYOUT_split_3x5_3_encoder(
+	TO(0), KC_NO, KC_NO, KC_NO, KC_NO, 				KC_PMNS, KC_7, KC_8, KC_9, KC_PPLS,
+	KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, 				KC_PAST, KC_4, KC_5, KC_6, KC_PDOT,
+	KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,  KC_AUDIO_MUTE,		KC_PSLS, KC_1, KC_2, KC_3, KC_PEQL,
+	KC_NO, KC_BSPC, KC_ENT, KC_NO, 					KC_NO, KC_NO, KC_NO, KC_0
+>>>>>>> 0adca45d00 (layer changes)
 ),
 
 [_SYMB] = LAYOUT_split_3x5_3_encoder(
