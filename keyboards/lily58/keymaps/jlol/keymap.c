@@ -30,25 +30,34 @@ enum custom_keycodes {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
  [_QWERTY] = LAYOUT(
-	QK_GESC, KC_1, KC_2, KC_3, KC_4, KC_5, 					KC_6, KC_7, KC_8, KC_9, KC_0, KC_BSPC, 
+	QK_GESC, KC_1, KC_2, KC_3, KC_4, KC_5, 					KC_6, KC_7, KC_8, KC_9, KC_0, KC_QUOT, 
 	KC_TAB, KC_Q, KC_W, KC_E, KC_R, KC_T, 					KC_Y, KC_U, KC_I, KC_O, KC_P, KC_MINS, 
 	KC_LCTL, KC_A, KC_S, KC_D, KC_F, KC_G, 					KC_H, KC_J, KC_K, KC_L, KC_SCLN, KC_ENT, 
 	KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_B, KC_LBRC, 		KC_RBRC,KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_RSFT, 
-			   KC_LGUI, KC_LALT, LT(1, KC_SPC), MO(4),        MO(2), KC_SPC, KC_DEL, MO(3)),
+			   KC_LGUI, KC_LALT, LT(1, KC_BSPC), TO(5),        MO(2), KC_SPC, KC_DEL, MO(3)),
 
 [_LOWER] = LAYOUT(
 	KC_F12, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, 				KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, 
-	KC_TRNS, KC_NO, SELWORD, SELLINE, KC_NO, KC_CAPS,                       KC_HOME, KC_PGDN, KC_PGUP, KC_END, KC_NO, KC_NO, 
+	//KC_TRNS, KC_NO, SELWORD, SELLINE, KC_NO, KC_CAPS,                       KC_HOME, KC_PGDN, KC_PGUP, KC_END, KC_NO, KC_NO, 
+	KC_TRNS, KC_CUT, KC_COPY, KC_PSTE, RSFT(KC_INS), KC_CAPS,                       KC_HOME, KC_PGDN, KC_PGUP, KC_END, KC_NO, KC_NO, 
 	KC_TRNS, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, 			 	KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, KC_NO, KC_NO, 
 	KC_TRNS, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, 	        KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, 
 			KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, 	        KC_TRNS, TO(3), KC_TRNS, KC_TRNS),
 
-[_RAISE] = LAYOUT(
+/*[_RAISE] = LAYOUT(
 	KC_F12, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, 				KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, 
 	KC_TRNS, KC_CUT, KC_COPY, KC_PSTE, RSFT(KC_INS), KC_FIND, 		KC_NO, KC_PLUS, KC_PMNS, KC_EQL, KC_NO, KC_NO,
         KC_TRNS, KC_LCBR, KC_RCBR, KC_LPRN, KC_RPRN, KC_PIPE, 		KC_BSLS, KC_LT, KC_GT, KC_LBRC, KC_RBRC, KC_NO, 
 	KC_TRNS, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, 	 KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, 
 				KC_TRNS, KC_TRNS, TO(5), KC_TRNS, 	KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS),
+				*/
+[_RAISE] = LAYOUT(
+	KC_GRV, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, 				KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, 
+	KC_TRNS, KC_EXLM, KC_AT, KC_HASH, KC_DLR, KC_PERC, 		KC_CIRC, KC_AMPR, KC_ASTR, KC_LBRC, KC_RBRC, KC_QUOT,
+	KC_TRNS, KC_LCBR, KC_RCBR, KC_LPRN, KC_RPRN, KC_PIPE, 		KC_UNDS, KC_PLUS, KC_MINS, KC_EQL, KC_DQUO, KC_NO,
+	KC_TRNS, KC_TILD, KC_GRV, KC_NO, KC_NO, KC_NO, KC_NO, 		KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_BSLS,
+				KC_TRNS, KC_TRNS, TO(5), KC_TRNS, 	KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS),
+
 
 [_NUMBERS] = LAYOUT(
 	TO(0), KC_NO, KC_NO, KC_NO, KC_NO, TO(5), 				KC_PAST, KC_P7, KC_P8, KC_P9, KC_PMNS, KC_BSPC, 
@@ -68,8 +77,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	KC_ESC, KC_1, KC_2, KC_3, KC_4, KC_5, 					KC_6, KC_7, KC_8, KC_9, KC_0, KC_BSPC, 
 	KC_TRNS, KC_Q, KC_W, KC_E, KC_R, KC_T, 					KC_Y, KC_U, KC_I, KC_O, KC_P, KC_MINS, 
 	KC_TRNS, KC_A, KC_S, KC_D, KC_F, KC_G, 					KC_H, KC_J, KC_K, KC_L, KC_SCLN, KC_ENT, 
-	KC_TRNS, KC_Z, KC_X, KC_C, KC_V, KC_B, TO(0), 	             TO(0),KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_RSFT, 
-			KC_LALT, KC_SPC, KC_SPC, KC_U,       KC_BSLS, KC_TRNS, KC_TRNS, KC_RALT) 
+	KC_TRNS, KC_Z, KC_X, KC_C, KC_V, KC_B, KC_M, 	             TO(0),KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_RSFT, 
+			KC_LALT, KC_SPC, KC_SPC, KC_U,       KC_GRV, KC_TRNS, KC_TRNS, KC_BSLS) 
 
 };
 
@@ -77,6 +86,17 @@ layer_state_t layer_state_set_user(layer_state_t state) {
   return state;
   //return update_tri_layer_state(state, _LOWER, _RAISE, _SYMB2);
 }
+
+
+enum combos {
+  JK_ESC,
+};
+
+const uint16_t PROGMEM jk_combo[] = {KC_J, KC_K, COMBO_END};
+
+combo_t key_combos[COMBO_COUNT] = {
+  [JK_ESC] = COMBO(jk_combo, KC_ESC),
+};
 
 //SSD1306 OLED update loop, make sure to enable OLED_ENABLE=yes in rules.mk
 #ifdef OLED_ENABLE

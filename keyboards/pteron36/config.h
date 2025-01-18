@@ -157,6 +157,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #define COMBO_COUNT 4
 =======
 #define COMBO_COUNT 7
@@ -167,6 +168,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 =======
 #define COMBO_COUNT 4
 >>>>>>> 6c2cd42cf8 (Added leader key, removed app key from right thumb, added futurama images in oled :))
+=======
+#define COMBO_COUNT 5
+>>>>>>> 82ba9c28a0 (Added uli)
 
 
 
@@ -206,6 +210,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define LEADER_TIMEOUT 600
 #define LEADER_PER_KEY_TIMING
+<<<<<<< HEAD
 =======
 >>>>>>> 8f6d320382 (Combos)
 =======
@@ -213,3 +218,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define LEADER_TIMEOUT 600
 #define LEADER_PER_KEY_TIMING
 >>>>>>> 6c2cd42cf8 (Added leader key, removed app key from right thumb, added futurama images in oled :))
+=======
+
+#define OLED_TIMEOUT 15000
+#define OLED_BRIGHTNESS 128
+
+>>>>>>> 82ba9c28a0 (Added uli)

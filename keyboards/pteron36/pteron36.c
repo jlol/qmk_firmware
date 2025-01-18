@@ -49,14 +49,8 @@ bool encoder_update_kb(uint8_t index, bool clockwise) {
     return true;
 }
 
-//common oled support.
-#ifdef OLED_ENABLE
-bool oled_task_kb(void) {
-    if (!oled_task_user()) {
-        return false;
-    }
-    if (is_keyboard_master()) {
 
+<<<<<<< HEAD
         static const char PROGMEM pexpress_logo[] = {
 		// 'planetexp_oled', 128x32px
 		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
@@ -186,3 +180,5 @@ bool oled_task_kb(void) {
     return false;
 }
 #endif
+=======
+>>>>>>> 82ba9c28a0 (Added uli)
