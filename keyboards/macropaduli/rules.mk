@@ -1,7 +1,7 @@
 # This file intentionally left blank
 
-SRC += analog.c
-MIDI_ENABLE = yes
+#SRC += analog.c
+#MIDI_ENABLE = yes
 
 LTO_ENABLE = yes
 

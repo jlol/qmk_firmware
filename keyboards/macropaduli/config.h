@@ -3,11 +3,11 @@
 
 #pragma once
 
-#define DIRECT_PINS {{D1, D0, D4, C6, D7, E6, B4, B5, F6, F7, B1, B3}}
+#define DIRECT_PINS {{D1, D0, D4, C6, D7, E6, B4, B5, F4, F5, F6, F7, B1, B3, B2, B6}}
 
-#define MIDI_ADVANCED
-#define SLIDER_PINA F4
-#define SLIDER_PINB F5
+//#define MIDI_ADVANCED
+//#define SLIDER_PINA F4
+//#define SLIDER_PINB F5
 
 #define ENCODERS_PAD_A { D3 }
 #define ENCODERS_PAD_B { D2 }

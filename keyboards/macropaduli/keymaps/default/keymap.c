@@ -3,39 +3,41 @@
 
 #include QMK_KEYBOARD_H
 #include "quantum.h"
-#include "analog.h"
-#include "qmk_midi.h"
+//#include "analog.h"
+//#include "qmk_midi.h"
 
-#define POT_TOLERANCE 12
+//#define POT_TOLERANCE 12
 
-extern MidiDevice midi_device;
+//extern MidiDevice midi_device;
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /*
-     * ┌───┬───┬───┬───┐
-     * │10 │11 │12 │   │
-     * ├───┼───┼───┼───│
-     * │ 7 │ 8 │ 9 │   │
-     * ├───┼───┼───┼───┤
-     * │ 3 │ 4 │ 6 │   │
-     * ├───┴───┼───┼───│
-     * │ 1 │ 2 │ 3 │   │
-     * └───┴───┴───┴───┘
+     * ┌───┬───┬───┬───┬───┬───┬───┐
+     * │ 1 │   │ 2 │   │ 3 │ 4 │ 5 │
+     * ├───┼───┼───┼───┼───┴───┴───│
+     * │ 6 │ 7 │ 8 │   │           │
+     * ├───┼───┼───┼───│           │
+     * │ 9 │10 │11 │   │           │
+     * ├───┼───┼───┼───┤  ENCODER  │
+     * │12 │13 │14 │   │           │
+     * ├───┴───┼───┼───│           │
+     * │15 │   │16 │   │           │
+     * └───┴───┴───┴───┴───────────┘
      */
-    [0] = //LAYOUT_numpad_12x1(
+    [0] =
     {{
-        KC_P7,   KC_A,   KC_P9,
-        KC_B, KC_C,   KC_D,
-        KC_F,   KC_E,   KC_G,
-        KC_P3,   KC_PENT, KC_H
-}}
-    //)
+        KC_B,            KC_C,    KC_D, KC_E, KC_F,
+        KC_P9,  KC_P0,   KC_A,
+        KC_P6,  KC_P7,   KC_P8,
+        KC_P3,  KC_P4,   KC_P5,
+        KC_P1,           KC_P2
+    }}
 };
 
 const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
     [0] = { ENCODER_CCW_CW(KC_LEFT, KC_RIGHT) },
 };
-
+/*
 uint8_t divisor = 0;
 int16_t pot_oldVal_A = 0;
 int16_t pot_val_A    = 0;
@@ -86,3 +88,4 @@ void matrix_init_user(void) {
 void matrix_scan_user(void) {
     slider();
 }
+*/
