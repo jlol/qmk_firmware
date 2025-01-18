@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< Updated upstream
-=======
->>>>>>> 82ba9c28a0 (Added uli)
 # MCU name
 MCU = atmega32u4
 
@@ -26,13 +21,9 @@ OLED_ENABLE = yes
 OLED_DRIVER = SSD1306    # OLED display
 SPLIT_KEYBOARD = yes
 
-=======
 OLED_ENABLE = no
 OLED_DRIVER = SSD1306    # OLED display
 SPLIT_KEYBOARD = yes
 COMBO_ENABLE = yes
 
-
->>>>>>> Stashed changes
->>>>>>> 82ba9c28a0 (Added uli)
 DEFAULT_FOLDER = lily58/rev1

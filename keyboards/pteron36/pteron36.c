@@ -23,34 +23,21 @@ bool encoder_update_kb(uint8_t index, bool clockwise) {
 
     if (index == 0) { // First encoder 
         if (clockwise) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             tap_code(KC_AUDIO_VOL_UP);
         } else {
             tap_code(KC_AUDIO_VOL_DOWN);
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 8f6d320382 (Combos)
             tap_code(KC_VOLU);
-        } else {
-            tap_code(KC_VOLD);
-            tap_code(KC_AUDIO_VOL_UP);
-        } else {
-            tap_code(KC_AUDIO_VOL_DOWN);
-<<<<<<< HEAD
->>>>>>> 4fc55134ec (layer changes)
->>>>>>> 0adca45d00 (layer changes)
-=======
->>>>>>> 8f6d320382 (Combos)
         }
     }
-
     return true;
 }
-
-
-<<<<<<< HEAD
+//common oled support.
+#ifdef OLED_ENABLE
+bool oled_task_kb(void) {
+    if (!oled_task_user()) {
+        return false;
+    }
+    if (is_keyboard_master()) {
         static const char PROGMEM pexpress_logo[] = {
 		// 'planetexp_oled', 128x32px
 		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
@@ -105,27 +92,17 @@ bool encoder_update_kb(uint8_t index, bool clockwise) {
             case 4:
                 oled_write_ln_P(PSTR("Symbols"), false);
                 break;
-<<<<<<< HEAD
-<<<<<<< HEAD
             //case 5:
             //    oled_write_ln_P(PSTR("Only numbers"), false);
-=======
             case 5:
                 oled_write_ln_P(PSTR("Only numbers"), false);
->>>>>>> f6c77ec26f (new layer for numbers)
-=======
             //case 5:
             //    oled_write_ln_P(PSTR("Only numbers"), false);
->>>>>>> 39687ddc2f (v2)
                 break;
             default:
                 // Or use the write_ln shortcut over adding '\n' to the end of your string
                 oled_write_ln_P(PSTR("Undefined"), false);
          }
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         // Host Keyboard LED Status
         //led_t led_state = host_keyboard_led_state();
         //oled_write_P(led_state.num_lock ? PSTR("NUM ") : PSTR("    "), false);
@@ -133,9 +110,6 @@ bool encoder_update_kb(uint8_t index, bool clockwise) {
         //oled_write_P(led_state.scroll_lock ? PSTR("SCR ") : PSTR("    "), false);
         oled_write_ln_P(PSTR(""), false);
         oled_write_ln_P(PSTR(""), false);
->>>>>>> 39687ddc2f (v2)
-=======
->>>>>>> 6c2cd42cf8 (Added leader key, removed app key from right thumb, added futurama images in oled :))
     } else {
         static const char PROGMEM qmk_logo[] = {
 		// 'bender_oled', 128x32px
@@ -180,5 +154,3 @@ bool encoder_update_kb(uint8_t index, bool clockwise) {
     return false;
 }
 #endif
-=======
->>>>>>> 82ba9c28a0 (Added uli)
