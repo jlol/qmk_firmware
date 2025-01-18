@@ -26,6 +26,7 @@
 #define _NUMB 2
 #define _NUMPAD 3
 #define _SYMB 4
+<<<<<<< HEAD
 //#define _FNUM 5
 
 
@@ -59,6 +60,9 @@ td_state_t cur_dance(qk_tap_dance_state_t *state);
 void x_finished(qk_tap_dance_state_t *state, void *user_data);
 void x_reset(qk_tap_dance_state_t *state, void *user_data);
 ////////////////////////////////////////////////////////////////////////////////////
+=======
+#define _FNUM 5
+>>>>>>> f6c77ec26f (new layer for numbers)
 
 enum custom_keycodes {
     BASE = SAFE_RANGE,
@@ -66,7 +70,11 @@ enum custom_keycodes {
     NUMB,
     NUMPAD,
     SYMB,
+<<<<<<< HEAD
 //    FNUM
+=======
+    FNUM
+>>>>>>> f6c77ec26f (new layer for numbers)
 };
 
 
@@ -83,11 +91,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	KC_A, KC_S, KC_D, KC_F, KC_G, 				KC_H, KC_J, KC_K, KC_L, TD(TD_SCLN_QUOT), 
 	LSFT_T(KC_Z), KC_X, KC_C, KC_V, KC_B, KC_AUDIO_MUTE, 	KC_N, KC_M, KC_COMM, KC_DOT, RSFT_T(KC_SLSH), 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	KC_LALT, MO(1), MO(4), TO(1), 				TO(2), LT(4,KC_LGUI), KC_SPC, LT(2,KC_DEL)
 >>>>>>> 0adca45d00 (layer changes)
 =======
 	KC_LALT, LT(1, KC_BSPC), MO(4), TO(1), 				TO(2), LT(4,KC_LGUI), KC_SPC, LT(2,KC_DEL)
 >>>>>>> db1e1f46e7 (restored backspace in thumb)
+=======
+	KC_LALT, LT(1, KC_BSPC), LT(4, KC_ENT), TO(1),		TO(5), LT(4,KC_LGUI), KC_SPC, LT(2,KC_DEL)
+>>>>>>> f6c77ec26f (new layer for numbers)
 ),
 
 [_MOVE] = LAYOUT_split_3x5_3_encoder(
@@ -122,7 +134,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	KC_1, KC_2, KC_3, KC_4, KC_5, 					KC_6, KC_7, KC_8, KC_9, KC_0,
 	KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, 				KC_F6, KC_F7, KC_F8, KC_F9, KC_F10,
 	KC_TRNS, KC_TRNS, KC_TRNS, KC_F11, KC_F12, KC_AUDIO_MUTE, 	KC_INS, KC_TRNS, KC_NO, KC_TRNS, KC_TRNS,
-	KC_TRNS, KC_TRNS, KC_TRNS, TO(0),				TO(0), KC_TRNS, KC_RCTL, KC_RALT),
+	KC_TRNS, KC_TRNS, KC_TRNS, TO(0),				TO(0), KC_TRNS, KC_RCTL, KC_RALT
+),
 
 [_NUMPAD] = LAYOUT_split_3x5_3_encoder(
 	TO(0), KC_NO, KC_NO, KC_NO, KC_NO, 				KC_PMNS, KC_7, KC_8, KC_9, KC_PPLS,
@@ -138,14 +151,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	KC_TILD, KC_GRV, KC_NO, KC_NO, KC_NO, KC_AUDIO_MUTE, 		KC_NO, KC_NO, KC_NO, KC_NO, KC_BSLS,
 	KC_TRNS, KC_NO, KC_TRNS, KC_NO, 				KC_NO, KC_NO, KC_NO, KC_NO
 ),
+<<<<<<< HEAD
 /*
+=======
+
+>>>>>>> f6c77ec26f (new layer for numbers)
 [_FNUM] = LAYOUT_split_3x5_3_encoder(
 	KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, 				KC_NO, KC_NO, KC_NO, KC_NO, KC_BSPC,
 	KC_1, KC_2, KC_3, KC_4, KC_5, 					KC_6, KC_7, KC_8, KC_9, KC_0,
 	KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_AUDIO_MUTE,		KC_NO, KC_NO, KC_COMM, KC_DOT, KC_NO,
 	KC_RCTL, KC_TRNS, KC_TRNS, TO(0),				TO(0), KC_TRNS, KC_SPC, KC_RALT
 )
+<<<<<<< HEAD
 	*/
+=======
+>>>>>>> f6c77ec26f (new layer for numbers)
 };
 
 enum combos {

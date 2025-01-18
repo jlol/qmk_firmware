@@ -173,13 +173,19 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define TAPPING_FORCE_HOLD_PER_KEY 
 
 //#define PERMISSIVE_HOLD
+<<<<<<< HEAD
 #define HOLD_ON_OTHER_KEY_PRESS
 #define HOLD_ON_OTHER_KEY_PRESS_PER_KEY
+=======
+<<<<<<< HEAD
+>>>>>>> f6c77ec26f (new layer for numbers)
 
 <<<<<<< HEAD
 =======
 #define PERMISSIVE_HOLD
 //#define HOLD_ON_OTHER_KEY_PRESS
+=======
+#define HOLD_ON_OTHER_KEY_PRESS
 
 >>>>>>> 8f6d320382 (Combos)
 

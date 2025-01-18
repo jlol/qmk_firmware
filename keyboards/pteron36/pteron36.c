@@ -111,8 +111,13 @@ bool oled_task_kb(void) {
             case 4:
                 oled_write_ln_P(PSTR("Symbols"), false);
                 break;
+<<<<<<< HEAD
             //case 5:
             //    oled_write_ln_P(PSTR("Only numbers"), false);
+=======
+            case 5:
+                oled_write_ln_P(PSTR("Only numbers"), false);
+>>>>>>> f6c77ec26f (new layer for numbers)
                 break;
             default:
                 // Or use the write_ln shortcut over adding '\n' to the end of your string
